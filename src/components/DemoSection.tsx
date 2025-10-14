@@ -3,19 +3,33 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Globe, FileText, Loader2, Shield, CreditCard, Lock } from "lucide-react";
 
-const DemoSection = ({ onAnalyze }: { onAnalyze: (website: string, description: string) => void }) => {
+const DemoSection = ({ onAnalyze }: { onAnalyze: (data: any) => void }) => {
   const [website, setWebsite] = useState("");
   const [description, setDescription] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (website && description) {
       setIsLoading(true);
-      setTimeout(() => {
-        onAnalyze(website, description);
+      try {
+        const response = await fetch('https://0a12f36a0558.ngrok-free.app/analyze', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            company_website: website,
+            user_input: description,
+          }),
+        });
+        const data = await response.json();
+        onAnalyze(data);
         setIsLoading(false);
-      }, 2000);
+      } catch (error) {
+        console.error('Error analyzing:', error);
+        setIsLoading(false);
+      }
     }
   };
 

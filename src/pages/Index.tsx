@@ -11,9 +11,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const [showResults, setShowResults] = useState(false);
+  const [resultsData, setResultsData] = useState<any>(null);
 
-  const handleAnalyze = (website: string, description: string) => {
-    console.log("Analyzing:", { website, description });
+  const handleAnalyze = (data: any) => {
+    console.log("Analyzing:", data);
+    setResultsData(data);
     setShowResults(true);
     // Scroll to results
     setTimeout(() => {
@@ -29,7 +31,7 @@ const Index = () => {
       <ProcessSection />
       <DemoSection onAnalyze={handleAnalyze} />
       <div id="results">
-        <ResultsSection isVisible={showResults} />
+        {showResults && resultsData && <ResultsSection data={resultsData} />}
       </div>
       <ValueSection />
       <TestimonialSection />
