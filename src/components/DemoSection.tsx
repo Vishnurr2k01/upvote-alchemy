@@ -13,7 +13,7 @@ const DemoSection = ({ onAnalyze }: { onAnalyze: (data: any) => void }) => {
     if (website && description) {
       setIsLoading(true);
       try {
-        const response = await fetch('https://0a12f36a0558.ngrok-free.app/analyze', {
+        const response = await fetch('https://hogwatrz-1.eastus.cloudapp.azure.com/analyze', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const DemoSection = ({ onAnalyze }: { onAnalyze: (data: any) => void }) => {
               )}
             </Button>
 
-            {/* Try Example Link */}
+
             <div className="text-center">
               <button
                 type="button"
