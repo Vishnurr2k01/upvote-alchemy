@@ -13,7 +13,7 @@ const DemoSection = ({ onAnalyze }: { onAnalyze: (data: any) => void }) => {
     if (website && description) {
       setIsLoading(true);
       try {
-        const response = await fetch('https://hogwatrz-1.eastus.cloudapp.azure.com/analyze', {
+        const response = await fetch('https://hogwartz-redditagent.eastus.cloudapp.azure.com/analyze', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
