@@ -25,6 +25,7 @@ const HeroSection = () => {
               >
                 Analyze My Company
               </Button>
+              <a href="#demo-section" className="inline-block">
               <Button 
                 size="lg" 
                 variant="ghost" 
@@ -33,6 +34,7 @@ const HeroSection = () => {
                 See How It Works
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
+              </a>
             </div>
 
             <div className="flex items-center gap-2 text-sm text-white/80 pt-2">

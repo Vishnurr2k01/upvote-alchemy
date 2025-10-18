@@ -34,7 +34,7 @@ const Index = () => {
         {showResults && resultsData && <ResultsSection data={resultsData} />}
       </div>
       <ValueSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <CTASection />
       <Footer />
     </div>

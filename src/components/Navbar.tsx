@@ -13,16 +13,16 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="text-foreground hover:text-primary">
+          {/* <Button variant="ghost" className="text-foreground hover:text-primary">
             Sign In
-          </Button>
+          </Button> */}
           <Button className="bg-gradient-to-r from-primary to-primary/90 hover:shadow-lg hover:scale-105 transition-all">
             Get Started
           </Button>
         </div>
       </div>
     </nav>
-  );
+  );  
 };
 
 export default Navbar;

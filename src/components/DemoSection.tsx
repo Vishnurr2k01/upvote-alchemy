@@ -39,9 +39,9 @@ const DemoSection = ({ onAnalyze }: { onAnalyze: (data: any) => void }) => {
   };
 
   return (
-    <section className="py-20 px-6 bg-muted/30">
-      <div className="container mx-auto max-w-3xl">
-        <div className="text-center mb-12">
+    <section className="py-20 px-6 bg-muted/30" >
+      <div className="container mx-auto max-w-3xl" id="demo-section">
+        <div className="text-center mb-12"> 
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Try It Now
           </h2>

@@ -20,13 +20,13 @@ const CTASection = () => {
           >
             Analyze My Company
           </Button>
-          <Button
+          {/* <Button
             size="lg"
             variant="ghost"
             className="h-14 px-8 text-white border-2 border-white/40 hover:bg-white/10 hover:border-white text-lg"
           >
             Schedule a Demo
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

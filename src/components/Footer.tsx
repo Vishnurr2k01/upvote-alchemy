@@ -12,8 +12,7 @@ const Footer = () => {
     <footer className="bg-secondary text-white py-16 px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-5 gap-8 mb-12">
-          {/* Brand Column */}
+        {/* <div className="grid md:grid-cols-5 gap-8 mb-12">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -26,7 +25,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h3 className="font-semibold mb-4 text-white">{category}</h3>
@@ -44,7 +42,7 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
